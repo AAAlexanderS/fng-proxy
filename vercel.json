@@ -1,7 +1,9 @@
 {
-  "functions": {
-    "api/fng.js": {
-      "runtime": "edge"
-    }
-  }
+  "version": 2,
+  "builds": [
+    { "src": "api/fng.js", "use": "@vercel/edge" }
+  ],
+  "routes": [
+    { "src": "/api/fng", "dest": "/api/fng.js" }
+  ]
 }
